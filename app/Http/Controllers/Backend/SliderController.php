@@ -35,6 +35,15 @@ class SliderController extends Controller
      */
     public function store(Request $request)
     {
+        $validator = validator($request->all(),[
+            'title' => 'required',
+            'subTitle' => 'min:3',
+            'date' => 'required',
+        ]);
+
+        if($validator->fails()){
+            return response()->json(['errors' =>$validator->errors()],422);
+        }
         return response()->json(['message' => 'Slider created successfully!']);
     }
 

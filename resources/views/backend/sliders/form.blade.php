@@ -10,23 +10,28 @@
         <div class="card-body">
           <div class="live-preview">
             <div class="mb-3">
-              <label for="title" class="form-label">Title</label>
-              <input type="text" class="form-control" name="title" id="title" placeholder="Enter slider title">
-            </div>
-            <div class="mb-3">
-              <label for="subtitle" class="form-label">Sub Title</label>
-              <input type="text" class="form-control" name="subtitle" id="subtitle" placeholder="Enter sub title">
+              <x-dynamic-input type="text" name="title" title="Title" id="title"
+                placeholder="Enter slider title" />
             </div>
 
             <div class="mb-3">
-              <label for="btn_url" class="form-label">Button URL</label>
-              <input type="text" class="form-control" name="btn_url" id="btn_url" placeholder="Enter url">
+              <x-dynamic-input type="text" name="subTitle" title="Sub Title" id="subTitle"
+                placeholder="Enter sub title" :required="true" />
             </div>
 
             <div class="mb-3">
-              <label for="description" class="form-label">Description</label>
-              <textarea class="form-control ckeditor-classic" id="description" name="description" rows="3"
-                placeholder="Enter slider description"></textarea>
+              <x-dynamic-input type="text" labelClass="form-label" title="Nepali date" name="date" id="date"
+                placeholder="Enter Nepali Date" inputClass="form-control date-piker" />
+            </div>
+
+            <div class="mb-3">
+              <x-dynamic-input id="btnUrl" title="Button URL" type="text" name="btnUrl"
+                placeholder="Enter url" />
+            </div>
+
+            <div class="mb-3">
+              <x-dynamic-textarea id="description" name="description" title="description"
+                placeholder="Enter slider description" textareaClass="form-control ckeditor-classic" rows="3" />
             </div>
             <div class="text-end">
               <button type="submit" class="btn btn-primary">Submit</button>
@@ -45,7 +50,7 @@
           <p class="text-muted">show or hide</p>
 
           <div class="form-check form-switch form-switch-lg" dir="ltr">
-            <input type="checkbox" class="form-check-input" id="customSwitchsizelg" checked="">
+            <input type="checkbox" class="form-check-input" name="status" id="customSwitchsizelg" checked>
             <label class="form-check-label" for="customSwitchsizelg">Active</label>
           </div>
         </div>
@@ -59,7 +64,7 @@
 
         <div class="card-body">
           <p class="text-muted">Thumb Image</p>
-          <input type="file" class="filepond filepond-input-multiple" multiple name="thumb"
+          <input type="file" class="filepond filepond-input-multiple" multiple name="image"
             data-allow-reorder="true" data-max-file-size="3MB" data-max-files="3">
         </div>
         <!-- end card body -->

@@ -12,7 +12,7 @@
   <meta content="Education Consultancy" name="description" />
   <meta content="Themesbrand" name="author" />
   <!-- App favicon -->
-  <link rel="shortcut icon" href="assets/images/favicon.ico">
+  <link rel="shortcut icon" href="{{ asset('assets/images/favicon.ico') }}">
 
   <!-- Layout config Js -->
   <script src="{{ asset('assets/js/layout.js') }}"></script>
@@ -21,10 +21,20 @@
   <!-- Toastr Css -->
   <link href="{{ asset('assets/css/toastr.css') }}" rel="stylesheet" type="text/css" />
 
-  <!-- Icons Css -->
-  <link href="{{ asset('assets/css/icons.min.css') }}" rel="stylesheet" type="text/css" />
+  <!-- Nepali DatePicker Css -->
+  <link href="{{ asset('assets/css/nepaliDatePicker.min.css') }}" rel="stylesheet" type="text/css" />
+
+  <!-- Filepond css -->
+  <link href="https://unpkg.com/filepond/dist/filepond.css" rel="stylesheet" />
+  <link href="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css"
+    rel="stylesheet" />
+
   <!-- App Css-->
   <link href="{{ asset('assets/css/app.min.css') }}" rel="stylesheet" type="text/css" />
+
+  <!-- Icons Css -->
+  <link href="{{ asset('assets/css/icons.min.css') }}" rel="stylesheet" type="text/css" />
+
   <!-- custom Css-->
   <link href="{{ asset('assets/css/custom.min.css') }}" rel="stylesheet" type="text/css" />
 
@@ -94,7 +104,8 @@
   <script src="{{ asset('assets/js/pages/plugins/lord-icon-2.1.0.js') }}"></script>
   <script src="{{ asset('assets/js/plugins.js') }}"></script>
   <script src="{{ asset('assets/libs/@ckeditor/ckeditor5-build-classic/build/ckeditor.js') }}"></script>
-  <script src="{{ asset('assets/libs/toastr/toastr.min.js') }}"></script>
+    <script src="{{ asset('assets/libs/toastr/toastr.min.js') }}"></script>
+  <script src="{{ asset('assets/libs/nepalidatepicker/jquery.nepaliDatePicker.min.js') }}"></script>
 
   <!--apexcharts-->
   <script src="{{ asset('assets/libs/apexcharts/apexcharts.min.js') }}"></script>
@@ -102,11 +113,15 @@
   <!-- projects js -->
   <script src="{{ asset('assets/js/pages/dashboard-projects.init.js') }}"></script>
 
+  <!-- filepond js -->
+  <script src="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.js"></script>
+  <script src="https://unpkg.com/filepond/dist/filepond.js"></script>
+
   <!-- App js -->
   <script src="{{ asset('assets/js/app.js') }}"></script>
 
   <!-- Custom js -->
-  <script src="{{ asset('assets/js/custom.js') }}"></script>
+  <script type="module" src="{{ asset('assets/js/custom.js') }}"></script>
 
 </body>
 

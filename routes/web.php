@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Backend\SliderController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\UploadController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,6 +20,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::post('/filepond/upload',[UploadController::class,'store']);
+Route::delete('/filepond/delete',[UploadController::class,'delete']);
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
