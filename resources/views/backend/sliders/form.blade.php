@@ -16,7 +16,7 @@
 
             <div class="mb-3">
               <x-dynamic-input type="text" name="subTitle" title="Sub Title" id="subTitle"
-                placeholder="Enter sub title" :required="true" />
+                placeholder="Enter sub title" />
             </div>
 
             <div class="mb-3">
@@ -35,6 +35,7 @@
             </div>
             <div class="text-end">
               <button type="submit" class="btn btn-primary">Submit</button>
+              <a href="{{ route('sliders.index') }}" class="btn btn-danger">Cancel</a>
             </div>
           </div>
         </div>
@@ -63,8 +64,8 @@
         </div><!-- end card header -->
 
         <div class="card-body">
-          <p class="text-muted">Thumb Image</p>
-          <input type="file" class="filepond filepond-input-multiple" multiple name="image"
+          <p class="text-muted">Images</p>
+          <input type="file" class="filepond filepond-input-multiple" multiple name="thumb[]"
             data-allow-reorder="true" data-max-file-size="3MB" data-max-files="3">
         </div>
         <!-- end card body -->

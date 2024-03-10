@@ -22,7 +22,7 @@ $('.date-picker').nepaliDatePicker({
     const pond = FilePond.create(inputElement);
     FilePond.setOptions({
         server:{
-            process:'/upload',
+            process:"/filepond/upload",
             revert: '/delete',
             headers:{
                 'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content'),

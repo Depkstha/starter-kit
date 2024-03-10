@@ -35,6 +35,7 @@ class SliderController extends Controller
      */
     public function store(Request $request)
     {
+        dd($request->all());
         $validator = validator($request->all(),[
             'title' => 'required',
             'subTitle' => 'min:3',
